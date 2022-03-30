@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Menghitung Nilai Mahasiswa</string>
+    <string name="logo">Logo</string>
+    <string name="telkom_university">TELKOM UNIVERSITY</string>
+    <string name="d3_rekayasa_perangkat_lunak_aplikasi">D3 REKAYASA PERANGKAT LUNAK APLIKASI</string>
+    <string name="identitasTextView">Identitas Mahasiswa</string>
+    <string name="editTextNama">Nama Lengkap</string>
+    <string name="editTextNIM">NIM</string>
+    <string  name="inputEditText">Input Nilai</string>
+    <string name="editTextPraktikum">Praktikum</string>
+    <string name="editTextAss1">Assessment 1</string>
+    <string name="editTextAss2">Assessment 2</string>
+    <string name="editTextAss3">Assessment 3</string>
+    <string name="hasilTextView">Hasil</string>
+    <string name="editTextHasilAngka"></string>
 </resources>
