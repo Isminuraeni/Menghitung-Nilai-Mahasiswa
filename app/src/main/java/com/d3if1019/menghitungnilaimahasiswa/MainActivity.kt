@@ -2,7 +2,8 @@ package com.d3if1019.menghitungnilaimahasiswa
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.text.TextUtils
+import android.widget.Toast
 import com.d3if1019.menghitungnilaimahasiswa.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +20,39 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hitungNilai() {
-        Log.d("MainActivity", "Tombol diklik!")
+//        val praktikum = binding.editTextPraktikum.text.toString().toFloat()
+//        val ass1 = binding.editTextAss1.text.toString().toFloat()
+//        val ass2 = binding.editTextAss2.text.toString().toFloat()
+//        val ass3 = binding.editTextAss3.text.toString().toFloat()
+//        val hitung = (0.25 * praktikum) + (0.20 * ass1) + (0.25 * ass2) + (0.30 * ass3)
+
+        val praktikum = binding.editTextPraktikum.text.toString()
+        if (TextUtils.isEmpty(praktikum)){
+            Toast.makeText(this, R.string.praktikum_invalid, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val ass1 = binding.editTextAss1.text.toString()
+        if (TextUtils.isEmpty(ass1)){
+            Toast.makeText(this, R.string.ass1_invalid, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val ass2 = binding.editTextAss2.text.toString()
+        if (TextUtils.isEmpty(ass2)){
+            Toast.makeText(this, R.string.ass2_invalid, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val ass3 = binding.editTextAss3.text.toString()
+        if (TextUtils.isEmpty(ass1)){
+            Toast.makeText(this, R.string.ass3_invalid, Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val hitung = (0.25 * praktikum.toFloat()) + (0.20 * ass1.toFloat()) + (0.25 * ass2.toFloat()) + (0.30 * ass3.toFloat())
+
+
+        binding.editTextHasilAngka.text = getString(R.string.hasilAngka_x, hitung)
     }
 }
