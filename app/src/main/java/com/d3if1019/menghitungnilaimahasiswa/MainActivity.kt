@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonHitung.setOnClickListener{ hitungNilai() }
+        binding.buttonReset.setOnClickListener{ reset()}
     }
 
     private fun hitungNilai() {
@@ -54,5 +55,15 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.editTextHasilAngka.text = getString(R.string.hasilAngka_x, hitung)
+    }
+
+    private fun reset(){
+        binding.editTextNama.setText("")
+        binding.editTextNIM.setText("")
+        binding.editTextPraktikum.setText("")
+        binding.editTextAss1.setText("")
+        binding.editTextAss2.setText("")
+        binding.editTextAss3.setText("")
+        binding.hasilTextView.setText("")
     }
 }
