@@ -26,15 +26,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#ED1E28"
+            android:fontFamily="@font/bebas_neue"
             android:text="@string/telkom_university"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageView"
-
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -42,6 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#2CC826"
+            android:fontFamily="@font/acme"
             android:text="@string/d3_rekayasa_perangkat_lunak_aplikasi"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -52,17 +54,18 @@
             app:layout_constraintTop_toBottomOf="@id/telyuTextView"
             tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/identitasTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="@string/identitasTextView"
-        android:textSize="16sp"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/jurusanTextView" />
+        <TextView
+            android:id="@+id/identitasTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/acme"
+            android:text="@string/identitasTextView"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jurusanTextView" />
 
         <EditText
             android:id="@+id/editTextNama"
@@ -96,21 +99,19 @@
             app:layout_constraintTop_toBottomOf="@id/editTextNama"
             tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/inputTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Input Nilai"
-        android:textSize="16sp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="315dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextNIM"
-        />
+        <TextView
+            android:id="@+id/inputTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/acme"
+            android:text="Input Nilai"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextNIM"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/editTextPraktikum"
@@ -176,43 +177,47 @@
             app:layout_constraintTop_toBottomOf="@id/editTextAss2"
             tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/buttonHitung"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#2CC826"
-        android:text="Hitung"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAss3"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="555dp" />
+        <Button
+            android:id="@+id/buttonHitung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#2CC826"
+            android:fontFamily="@font/bebas_neue"
+            android:text="Hitung"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss3"
+            tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/buttonReset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="120dp"
-        android:backgroundTint="#D34D4D"
-        android:text="Reset"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAss3"
-        tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="120dp"
+            android:backgroundTint="#D34D4D"
+            android:fontFamily="@font/bebas_neue"
+            android:text="Reset"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss3"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/hasilTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        android:text="Hasil"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonReset"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/hasilTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/acme"
+            android:text="Hasil"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonReset"
+            tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/editTextHasilAngka"
