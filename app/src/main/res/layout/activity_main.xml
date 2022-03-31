@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,38 +21,36 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_telyu" />
 
-    <TextView
-        android:id="@+id/telyuTextView"
-        android:layout_width="413dp"
-        android:layout_height="39dp"
-        android:background="#ED1E28"
-        android:text="@string/telkom_university"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"
+        <TextView
+            android:id="@+id/telyuTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#ED1E28"
+            android:text="@string/telkom_university"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
 
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="88dp" />
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/jurusanTextView"
-        android:layout_width="411dp"
-        android:layout_height="26dp"
-        android:background="#2CC826"
-        android:text="@string/d3_rekayasa_perangkat_lunak_aplikasi"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#4527A0"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/telyuTextView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="126dp" />
+        <TextView
+            android:id="@+id/jurusanTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#2CC826"
+            android:text="@string/d3_rekayasa_perangkat_lunak_aplikasi"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="#4527A0"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telyuTextView"
+            tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/identitasTextView"
@@ -62,33 +64,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/jurusanTextView" />
 
-    <EditText
-        android:id="@+id/editTextNama"
-        android:layout_width="371dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nama Lengkap"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/identitasTextView"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/editTextNama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Nama Lengkap"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/identitasTextView"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editTextNIM"
-        android:layout_width="371dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="NIM"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextNama"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/editTextNIM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="NIM"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextNama"
+            tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/inputTextView"
@@ -106,65 +112,69 @@
         app:layout_constraintTop_toBottomOf="@id/editTextNIM"
         />
 
-    <EditText
-        android:id="@+id/editTextPraktikum"
-        android:layout_width="371dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="Praktikum"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputTextView"
-        tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck"
-        tools:layout_editor_absoluteY="350dp" />
+        <EditText
+            android:id="@+id/editTextPraktikum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Praktikum"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputTextView"
+            tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
 
-    <EditText
-        android:id="@+id/editTextAss1"
-        android:layout_width="371dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="Assessment 1"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextPraktikum"
-        tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck"
-        tools:layout_editor_absoluteY="398dp" />
+        <EditText
+            android:id="@+id/editTextAss1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Assessment 1"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextPraktikum"
+            tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
 
-    <EditText
-        android:id="@+id/editTextAss2"
-        android:layout_width="371dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="Assessment 2"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAss1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="446dp" />
+        <EditText
+            android:id="@+id/editTextAss2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Assessment 2"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss1"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editTextAss3"
-        android:layout_width="371dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="Assessment 3"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextAss2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="494dp" />
+        <EditText
+            android:id="@+id/editTextAss3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Assessment 3"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss2"
+            tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonHitung"
@@ -196,39 +206,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
         android:text="Hasil"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonHitung"
+        app:layout_constraintTop_toBottomOf="@id/buttonReset"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/editTextHasilAngka"
         android:layout_width="200dp"
         android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hasilTextView"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/editTextHasilHuruf"-->
-<!--        android:layout_width="200dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textCapCharacters"-->
-<!--        android:minHeight="48dp"-->
-<!--        android:textSize="16sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/editTextHasilAngka"-->
-<!--        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />-->
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

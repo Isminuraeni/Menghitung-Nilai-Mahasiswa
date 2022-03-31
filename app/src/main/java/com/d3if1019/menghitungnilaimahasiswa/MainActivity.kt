@@ -21,12 +21,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hitungNilai() {
-//        val praktikum = binding.editTextPraktikum.text.toString().toFloat()
-//        val ass1 = binding.editTextAss1.text.toString().toFloat()
-//        val ass2 = binding.editTextAss2.text.toString().toFloat()
-//        val ass3 = binding.editTextAss3.text.toString().toFloat()
-//        val hitung = (0.25 * praktikum) + (0.20 * ass1) + (0.25 * ass2) + (0.30 * ass3)
-
         val praktikum = binding.editTextPraktikum.text.toString()
         if (TextUtils.isEmpty(praktikum)){
             Toast.makeText(this, R.string.praktikum_invalid, Toast.LENGTH_LONG).show()
@@ -46,13 +40,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         val ass3 = binding.editTextAss3.text.toString()
-        if (TextUtils.isEmpty(ass1)){
+        if (TextUtils.isEmpty(ass3)){
             Toast.makeText(this, R.string.ass3_invalid, Toast.LENGTH_LONG).show()
             return
         }
 
         val hitung = (0.25 * praktikum.toFloat()) + (0.20 * ass1.toFloat()) + (0.25 * ass2.toFloat()) + (0.30 * ass3.toFloat())
-
 
         binding.editTextHasilAngka.text = getString(R.string.hasilAngka_x, hitung)
     }
@@ -64,6 +57,6 @@ class MainActivity : AppCompatActivity() {
         binding.editTextAss1.setText("")
         binding.editTextAss2.setText("")
         binding.editTextAss3.setText("")
-        binding.hasilTextView.setText("")
+        binding.editTextHasilAngka.setText("")
     }
 }

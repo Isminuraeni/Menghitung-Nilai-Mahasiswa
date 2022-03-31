@@ -12,16 +12,8 @@
     <string name="editTextAss2">Assessment 2</string>
     <string name="editTextAss3">Assessment 3</string>
     <string name="hasilTextView">Hasil</string>
-    <string name="editTextHasilAngka"></string>
-    <string name="editTextHasilHuruf"></string>
-
+    <string name="editTextHasilAngka" />
     <string name="hasilAngka_x">Nilai: %1$.2f</string>
-<!--    <string name="a">A</string>-->
-<!--    <string name="b">B</string>-->
-<!--    <string name="c">C</string>-->
-<!--    <string name="d">D</string>-->
-<!--    <string name="e">E</string>-->
-<!--    <string name="hasilHuruf_x">Kategori: %1$s</string>-->
 
     <string name="praktikum_invalid">Nilai praktikum tidak boleh kosong</string>
     <string name="ass1_invalid">Nilai Assessment 1 tidak boleh kosong</string>
