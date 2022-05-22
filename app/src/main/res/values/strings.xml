@@ -19,4 +19,6 @@
     <string name="ass1_invalid">Nilai Assessment 1 tidak boleh kosong</string>
     <string name="ass2_invalid">Nilai Assessment 2 tidak boleh kosong</string>
     <string name="ass3_invalid">Nilai Assessment 3 tidak boleh kosong</string>
+
+    <string name="about">Aplikasi Menghitung Nilai Mahasiswa ini merupakan aplikasi yang sangat membantu Anda dalam menghitung rata-rata nilai.</string>
 </resources>

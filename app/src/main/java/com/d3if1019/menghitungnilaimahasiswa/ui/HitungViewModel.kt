@@ -1,4 +1,4 @@
-package com.d3if1019.menghitungnilaimahasiswa
+package com.d3if1019.menghitungnilaimahasiswa.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
