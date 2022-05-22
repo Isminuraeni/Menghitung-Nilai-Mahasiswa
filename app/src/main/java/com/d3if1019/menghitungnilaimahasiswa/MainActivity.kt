@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.d3if1019.menghitungnilaimahasiswa.databinding.ActivityMainBinding
+import com.d3if1019.menghitungnilaimahasiswa.model.HasilNilai
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val viewModel: MainViewModel by lazy {
+        ViewModelProvider(this)[MainViewModel::class.java]
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +24,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonHitung.setOnClickListener{ hitungNilai() }
         binding.buttonReset.setOnClickListener{ reset()}
+
+        viewModel.getHasilNilai().observe(this, { showResult(it) })
     }
 
     private fun hitungNilai() {
@@ -45,9 +53,12 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val hitung = (0.25 * praktikum.toFloat()) + (0.20 * ass1.toFloat()) + (0.25 * ass2.toFloat()) + (0.30 * ass3.toFloat())
-
-        binding.editTextHasilAngka.text = getString(R.string.hasilAngka_x, hitung)
+        viewModel.hitungNilai(
+            praktikum.toFloat(),
+            ass1.toFloat(),
+            ass2.toFloat(),
+            ass3.toFloat()
+        )
     }
 
     private fun reset(){
@@ -58,5 +69,10 @@ class MainActivity : AppCompatActivity() {
         binding.editTextAss2.setText("")
         binding.editTextAss3.setText("")
         binding.editTextHasilAngka.setText("")
+    }
+
+    private fun showResult(result: HasilNilai?){
+        if (result == null) return
+        binding.editTextHasilAngka.text = getString(R.string.hasilAngka_x, result.hasil)
     }
 }

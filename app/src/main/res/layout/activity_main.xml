@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass">
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,7 +30,6 @@
             android:fontFamily="@font/bebas_neue"
             android:text="@string/telkom_university"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,6 @@
             android:fontFamily="@font/acme"
             android:text="@string/d3_rekayasa_perangkat_lunak_aplikasi"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="#4527A0"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
