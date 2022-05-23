@@ -38,6 +38,7 @@ class HitungFragment : Fragment() {
                 R.id.action_hitungFragment_to_aboutFragment
             )
         }
+        binding.buttonReset.setOnClickListener { reset() }
         viewModel.getHasilNilai().observe(requireActivity(), {showResult(it)})
     }
 
