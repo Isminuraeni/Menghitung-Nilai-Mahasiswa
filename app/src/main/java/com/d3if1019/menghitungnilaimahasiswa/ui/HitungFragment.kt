@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.d3if1019.menghitungnilaimahasiswa.R
 import com.d3if1019.menghitungnilaimahasiswa.databinding.FragmentHitungBinding
 import com.d3if1019.menghitungnilaimahasiswa.model.HasilNilai
@@ -31,6 +32,12 @@ class HitungFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.buttonHitung.setOnClickListener { hitungNilai() }
+        binding.aboutButton.setOnClickListener {
+            it.findNavController().navigate(
+                R.id.action_hitungFragment_to_aboutFragment
+            )
+        }
         viewModel.getHasilNilai().observe(requireActivity(), {showResult(it)})
     }
 
@@ -80,5 +87,6 @@ class HitungFragment : Fragment() {
     private fun showResult(result: HasilNilai?){
         if (result == null) return
         binding.editTextHasilAngka.text = getString(R.string.hasilAngka_x, result.hasil)
+        binding.aboutButton.visibility = View.VISIBLE
     }
 }
