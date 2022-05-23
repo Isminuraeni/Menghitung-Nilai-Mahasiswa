@@ -1,5 +1,7 @@
 package com.d3if1019.menghitungnilaimahasiswa.ui
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -26,7 +28,7 @@ class HitungFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -38,6 +40,7 @@ class HitungFragment : Fragment() {
                 R.id.action_hitungFragment_to_aboutFragment
             )
         }
+        binding.shareButton.setOnClickListener { shareData() }
         binding.buttonReset.setOnClickListener { reset() }
         viewModel.getHasilNilai().observe(requireActivity(), {showResult(it)})
     }
@@ -88,6 +91,24 @@ class HitungFragment : Fragment() {
     private fun showResult(result: HasilNilai?){
         if (result == null) return
         binding.editTextHasilAngka.text = getString(R.string.hasilAngka_x, result.hasil)
-        binding.aboutButton.visibility = View.VISIBLE
+        binding.buttonGroup.visibility = View.VISIBLE
+    }
+
+    private fun shareData(){
+        val message = getString(
+            R.string.bagikan_template,
+            binding.editTextNama.text,
+            binding.editTextNIM.text,
+            binding.editTextPraktikum.text,
+            binding.editTextAss1.text,
+            binding.editTextAss2.text,
+            binding.editTextAss3.text)
+
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager) != null) {
+            startActivity(shareIntent)
+        }
     }
 }
