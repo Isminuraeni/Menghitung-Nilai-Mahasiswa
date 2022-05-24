@@ -1,7 +1,6 @@
 package com.d3if1019.menghitungnilaimahasiswa.ui.histori
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -17,6 +16,7 @@ import com.d3if1019.menghitungnilaimahasiswa.data.SettingDataStore
 import com.d3if1019.menghitungnilaimahasiswa.data.dataStore
 import com.d3if1019.menghitungnilaimahasiswa.databinding.FragmentHistoriBinding
 import com.d3if1019.menghitungnilaimahasiswa.db.NilaiDb
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 
 class HistoriFragment : Fragment() {
@@ -36,7 +36,7 @@ class HistoriFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHistoriBinding.inflate(layoutInflater,
             container, false)
         setHasOptionsMenu(true)
@@ -82,17 +82,23 @@ class HistoriFragment : Fragment() {
                 ContextCompat.getDrawable(requireContext(),
                     R.drawable.ic_baseline_grid_on_24)
             else ContextCompat.getDrawable(requireContext(),
-                R.drawable.ic_baseline_list_24)
+                R.drawable.ic_baseline_list_24 )
     }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.layout_menu, menu)
-        val layoutButton = menu?.findItem(R.id.action_switch_layout)
+        val layoutButton = menu.findItem(R.id.action_switch_layout)
         setIcon(layoutButton)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            R.id.menu_hapus -> {
+                hapusData()
+                return true
+            }
             R.id.action_switch_layout -> {
-                // Sets isLinearLayoutManager to the opposite value
                 isLinearLayoutManager = !isLinearLayoutManager
 
                 lifecycleScope.launch {
@@ -100,8 +106,6 @@ class HistoriFragment : Fragment() {
                         isLinearLayoutManager, requireContext()
                     )
                 }
-
-                // Sets layout and icon
                 chooseLayout()
                 setIcon(item)
                 true
@@ -109,4 +113,17 @@ class HistoriFragment : Fragment() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    private fun hapusData() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setMessage(R.string.konfirmasi_hapus)
+            .setPositiveButton(getString(R.string.hapus)) { _, _ ->
+                viewModel.hapusData()
+            }
+            .setNegativeButton(getString(R.string.batal)) { dialog, _ ->
+                dialog.cancel()
+            }
+            .show()
+    }
+
 }

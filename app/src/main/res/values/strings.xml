@@ -36,5 +36,8 @@
     <string name="hasil_x">Rata-rata: %1$.1f</string>
     <string name="data_x">Praktikum: %1$.1f - Ass1: %2$.1f - Ass2: %3$.1f - Ass3: %4$.1f</string>
     <string name="action_switch_layout">Ubah Layout</string>
-
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
 </resources>
