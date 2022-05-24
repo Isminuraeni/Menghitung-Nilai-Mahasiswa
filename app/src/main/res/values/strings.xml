@@ -35,5 +35,6 @@
     <string name="copyright">Hai, Selamat Datang di Aplikasi Menghitung Nilai Mahasiswa. Semoga bermanfaat, Keep Explore!\n\nTemukan kodenya di https://github.com/isminurani/Menghitung-Nilai-Mahasiswa\n\nCopyright © 2022 Ismi Nuraeni Januarita.\nAll rights reserved.</string>
     <string name="hasil_x">Rata-rata: %1$.1f</string>
     <string name="data_x">Praktikum: %1$.1f - Ass1: %2$.1f - Ass2: %3$.1f - Ass3: %4$.1f</string>
+    <string name="action_switch_layout">Ubah Layout</string>
 
 </resources>
