@@ -8,8 +8,8 @@ data class NilaiEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L,
     var tanggal: Long = System.currentTimeMillis(),
-    var praktikum: Double,
-    var ass1: Double,
-    var ass2: Double,
-    var ass3: Double
+    var praktikum: Float,
+    var ass1: Float,
+    var ass2: Float,
+    var ass3: Float
 )

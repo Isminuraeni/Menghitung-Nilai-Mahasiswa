@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/drawable/circle_background.xml" value="0.2115" />
         <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/layout/fragment_about.xml" value="0.25" />
+        <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/layout/fragment_histori.xml" value="0.20416666666666666" />
         <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/layout/fragment_hitung.xml" value="0.33" />
+        <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/layout/fragment_profil.xml" value="0.20416666666666666" />
+        <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/layout/item_histori.xml" value="0.20416666666666666" />
+        <entry key="..\:/KULIAH/Semester 4/Menghitung Nilai Mahasiswa/app/src/main/res/menu/options_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
