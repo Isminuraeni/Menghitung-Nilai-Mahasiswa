@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/hitungFragment">
+
+    <fragment
+        android:id="@+id/hitungFragment"
+        android:name="com.d3if1019.menghitungnilaimahasiswa.ui.hitung.HitungFragment"
+        android:label="fragment_hitung"
+        tools:layout="@layout/fragment_hitung" >
+        <action
+            android:id="@+id/action_hitungFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_historiFragment"
+            app:destination="@id/historiFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.d3if1019.menghitungnilaimahasiswa.ui.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/historiFragment"
+        android:name="com.d3if1019.menghitungnilaimahasiswa.ui.histori.HistoriFragment"
+        android:label="HistoriFragment" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.d3if1019.menghitungnilaimahasiswa.ui.ProfilFragment"
+        android:label="ProfilFragment" />
+</navigation>

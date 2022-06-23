@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.hitung.HitungFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="226dp"
+        android:layout_height="91dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_telyu" />
+
+        <TextView
+            android:id="@+id/telyuTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#ED1E28"
+            android:fontFamily="@font/bebas_neue"
+            android:text="@string/telkom_university"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/jurusanTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#2CC826"
+            android:fontFamily="@font/acme"
+            android:text="@string/d3_rekayasa_perangkat_lunak_aplikasi"
+            android:textAlignment="center"
+            android:textColor="#4527A0"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telyuTextView"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/identitasTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/acme"
+            android:text="@string/identitasTextView"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jurusanTextView" />
+
+        <EditText
+            android:id="@+id/editTextNama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Nama Lengkap"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/identitasTextView"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextNIM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="NIM"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextNama"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/inputTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/acme"
+            android:text="Input Nilai"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextNIM"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextPraktikum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Praktikum"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputTextView"
+            tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
+
+        <EditText
+            android:id="@+id/editTextAss1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Assessment 1"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextPraktikum"
+            tools:ignore="MissingConstraints,DuplicateClickableBoundsCheck" />
+
+        <EditText
+            android:id="@+id/editTextAss2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Assessment 2"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextAss3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="Assessment 3"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss2"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/buttonHitung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#2CC826"
+            android:fontFamily="@font/bebas_neue"
+            android:text="Hitung"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss3"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="120dp"
+            android:backgroundTint="#D34D4D"
+            android:fontFamily="@font/bebas_neue"
+            android:text="Reset"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAss3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/hasilTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/acme"
+            android:text="Hasil"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonReset"
+            tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/editTextHasilAngka"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hasilTextView"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#386EB1"
+            android:text="@string/about_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shareButton"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextHasilAngka"/>
+
+        <Button
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#386EB1"
+            android:text="@string/bagikan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/aboutButton"
+            app:layout_constraintTop_toTopOf="@+id/aboutButton" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/buttonGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:constraint_referenced_ids="aboutButton,shareButton"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
