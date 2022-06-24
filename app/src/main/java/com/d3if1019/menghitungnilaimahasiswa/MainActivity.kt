@@ -20,6 +20,28 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
 
+        Log.i("MainActivity", "onCreate dijalankan")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("MainActivity", "onStart dijalankan")
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.i("MainActivity", "onResume dijalankan")
+    }
+    override fun onPause() {
+        Log.i("MainActivity", "onPause dijalankan")
+        super.onPause()
+    }
+    override fun onStop() {
+        Log.i("MainActivity", "onStop dijalankan")
+        super.onStop()
+    }
+    override fun onDestroy() {
+        Log.i("MainActivity", "onDestroy dijalankan")
+        super.onDestroy()
     }
 
     override fun onSupportNavigateUp(): Boolean {
