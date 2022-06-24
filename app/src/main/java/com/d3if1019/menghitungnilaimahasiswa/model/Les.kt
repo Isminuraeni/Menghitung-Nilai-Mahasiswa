@@ -5,5 +5,5 @@ import com.d3if1019.menghitungnilaimahasiswa.R
 data class Les(
     val nama: String,
     val alamat: String,
-    val imageResId: Int = R.drawable.go
+    val imageId: String
 )

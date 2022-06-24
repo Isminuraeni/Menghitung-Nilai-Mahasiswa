@@ -27,4 +27,8 @@ object LesApi {
     val service: LesApiService by lazy {
         retrofit.create(LesApiService::class.java)
     }
+
+    fun getLesUrl(nama: String): String {
+        return "$BASE_URL$nama.png"
+    }
 }

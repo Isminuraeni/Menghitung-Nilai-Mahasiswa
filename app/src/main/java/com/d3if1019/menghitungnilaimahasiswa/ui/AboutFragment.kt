@@ -8,15 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import com.d3if1019.menghitungnilaimahasiswa.model.Les
-import com.d3if1019.menghitungnilaimahasiswa.MainAdapter
-import com.d3if1019.menghitungnilaimahasiswa.R
 import com.d3if1019.menghitungnilaimahasiswa.databinding.FragmentAboutBinding
 import com.d3if1019.menghitungnilaimahasiswa.ui.hitung.AboutViewModel
 
 class AboutFragment : Fragment() {
     private val viewModel: AboutViewModel by lazy {
-        ViewModelProvider(this).get(AboutViewModel::class.java)
+        ViewModelProvider(this)[AboutViewModel::class.java]
     }
 
     private lateinit var binding: FragmentAboutBinding

@@ -1,16 +1,20 @@
 package com.d3if1019.menghitungnilaimahasiswa.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.d3if1019.menghitungnilaimahasiswa.R
 import com.d3if1019.menghitungnilaimahasiswa.databinding.ListItemBinding
 import com.d3if1019.menghitungnilaimahasiswa.model.Les
+import com.d3if1019.menghitungnilaimahasiswa.network.LesApi
 
 class AboutAdapter : RecyclerView.Adapter<AboutAdapter.ViewHolder>() {
 
     private val data = mutableListOf<Les>()
+    @SuppressLint("NotifyDataSetChanged")
     fun updateData(newData: List<Les>) {
         data.clear()
         data.addAll(newData)
@@ -24,7 +28,11 @@ class AboutAdapter : RecyclerView.Adapter<AboutAdapter.ViewHolder>() {
         fun bind(les: Les) = with(binding) {
             namaTextView.text = les.nama
             alamatTextView.text = les.alamat
-            imageView.setImageResource(les.imageResId)
+
+            Glide.with(imageView.context)
+                .load(LesApi.getLesUrl(les.imageId))
+                .error(R.drawable.ic_baseline_broken_image_24)
+                .into(imageView)
 
             root.setOnClickListener {
                 val message = root.context.getString(R.string.message, les.nama)
