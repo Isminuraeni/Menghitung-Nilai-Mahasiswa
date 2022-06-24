@@ -45,5 +45,8 @@
     <string name="koneksi_error">Koneksi error</string>
 
     <string name="channel_name">Updater</string>
-    <string name="channel_desc">Update data hewan otomatis</string>
+    <string name="channel_desc">Update data les otomatis</string>
+
+    <string name="notif_title">Ada tempat les baru!</string>
+    <string name="notif_text">Cek sekarang biar nggak penasaran..</string>
 </resources>
