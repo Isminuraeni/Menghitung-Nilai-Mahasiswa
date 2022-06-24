@@ -1,5 +1,6 @@
 package com.d3if1019.menghitungnilaimahasiswa.ui.hitung
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,6 +9,7 @@ import com.d3if1019.menghitungnilaimahasiswa.db.NilaiDao
 import com.d3if1019.menghitungnilaimahasiswa.db.NilaiEntity
 import com.d3if1019.menghitungnilaimahasiswa.model.HasilNilai
 import com.d3if1019.menghitungnilaimahasiswa.model.hitungNilai
+import com.d3if1019.menghitungnilaimahasiswa.network.LesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -36,3 +38,4 @@ class HitungViewModel(private val db: NilaiDao) : ViewModel() {
 
     fun getHasilNilai(): LiveData<HasilNilai?> = hasilNilai
 }
+
