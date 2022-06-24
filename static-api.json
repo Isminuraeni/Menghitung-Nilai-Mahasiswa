@@ -1,52 +1,52 @@
 [
   {
-  nama: "Ganesha Operation",
-  alamat: "Buah Batu",
-  imageId: "go"
+  "nama": "Ganesha Operation",
+  "alamat": "Buah Batu",
+  "imageId": "go"
   },
   {
-  nama: "Neutron",
-  alamat: "Bojongsong",
-  imageId: "neutron"
+  "nama": "Neutron",
+  "alamat": "Bojongsong",
+  "imageId": "neutron"
   },
   {
-  nama: "Nurul Fikri",
-  alamat: "Arcamanik",
-  imageId: "nufik"
+  "nama": "Nurul Fikri",
+  "alamat": "Arcamanik",
+  "imageId": "nufik"
   },
   {
-  nama: "Prima Gama",
-  alamat: "Lembang",
-  imageId: "primagama"
+  "nama": "Prima Gama",
+  "alamat": "Lembang",
+  "imageId": "primagama"
   },
   {
-  nama: "Ruang Guru",
-  alamat: "Dago",
-  imageId: "ruangguru"
+  "nama": "Ruang Guru",
+  "alamat": "Dago",
+  "imageId": "ruangguru"
   },
   {
-  nama: "Kampung Inggris",
-  alamat: "Sukabirus",
-  imageId: "kampung"
+  "nama": "Kampung Inggris",
+  "alamat": "Sukabirus",
+  "imageId": "kampung"
   },
   {
-  nama: "Sinau",
-  alamat: "Sukapura",
-  imageId: "sinau"
+  "nama": "Sinau",
+  "alamat": "Sukapura",
+  "imageId": "sinau"
   },
   {
-  nama: "Kumon",
-  alamat: "Cipaganti",
-  imageId: "kumon"
+  "nama": "Kumon",
+  "alamat": "Cipaganti",
+  "imageId": "kumon"
   },
   {
-  nama: "Lolly",
-  alamat: "Batununggal",
-  imageId: "lolly"
+  "nama": "Lolly",
+  "alamat": "Batununggal",
+  "imageId": "lolly"
   },
   {
-  nama: "Aetugrul",
-  alamat: "Rajamantri",
-  imageId: "aetugrul"
+  "nama": "Aetugrul",
+  "alamat": "Rajamantri",
+  "imageId": "aetugrul"
   }
 ]
