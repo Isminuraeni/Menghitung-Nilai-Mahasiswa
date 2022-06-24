@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
+import com.d3if1019.menghitungnilaimahasiswa.MainActivity
 import com.d3if1019.menghitungnilaimahasiswa.UpdateWorker
 import com.d3if1019.menghitungnilaimahasiswa.db.NilaiDao
 import com.d3if1019.menghitungnilaimahasiswa.db.NilaiEntity
@@ -29,7 +30,7 @@ class HitungViewModel(private val db: NilaiDao) : ViewModel() {
             .setInitialDelay(1, TimeUnit.MINUTES)
             .build()
         WorkManager.getInstance(app).enqueueUniqueWork(
-            "updater",
+            MainActivity.CHANNEL_ID,
             ExistingWorkPolicy.REPLACE,
             request
         )
