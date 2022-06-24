@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.d3if1019.menghitungnilaimahasiswa.databinding.FragmentAboutBinding
+import com.d3if1019.menghitungnilaimahasiswa.network.LesApi
 import com.d3if1019.menghitungnilaimahasiswa.ui.hitung.AboutViewModel
 
 class AboutFragment : Fragment() {
@@ -19,8 +20,9 @@ class AboutFragment : Fragment() {
     private lateinit var binding: FragmentAboutBinding
     private lateinit var myAdapter: AboutAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         binding = FragmentAboutBinding.inflate(layoutInflater, container, false)
         myAdapter = AboutAdapter()
@@ -39,6 +41,23 @@ class AboutFragment : Fragment() {
         viewModel.getLes().observe(viewLifecycleOwner) {
             myAdapter.updateData(it)
         }
+        viewModel.getStatus().observe(viewLifecycleOwner) {
+            updateProgress(it)
+        }
     }
 
+    private fun updateProgress(status: LesApi.ApiStatus) {
+        when (status) {
+            LesApi.ApiStatus.LOADING -> {
+                binding.progressBar.visibility = View.VISIBLE
+            }
+            LesApi.ApiStatus.SUCCESS -> {
+                binding.progressBar.visibility = View.GONE
+            }
+            LesApi.ApiStatus.FAILED -> {
+                binding.progressBar.visibility = View.GONE
+                binding.networkError.visibility = View.VISIBLE
+            }
+        }
+    }
 }

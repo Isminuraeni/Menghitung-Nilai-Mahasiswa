@@ -14,6 +14,8 @@ import kotlinx.coroutines.launch
 class AboutViewModel : ViewModel() {
 
     private val data = MutableLiveData<List<Les>>()
+    private val status = MutableLiveData<LesApi.ApiStatus>()
+
 
     init {
         retrieveData()
@@ -21,13 +23,17 @@ class AboutViewModel : ViewModel() {
 
     private fun retrieveData() {
         viewModelScope.launch (Dispatchers.IO) {
+            status.postValue(LesApi.ApiStatus.LOADING)
             try {
                 data.postValue(LesApi.service.getLes())
+                status.postValue(LesApi.ApiStatus.SUCCESS)
             } catch (e: Exception) {
                 Log.d("AboutViewModel", "Failure: ${e.message}")
+                status.postValue(LesApi.ApiStatus.FAILED)
             }
         }
     }
 
     fun getLes(): LiveData<List<Les>> = data
+    fun getStatus(): LiveData<LesApi.ApiStatus> = status
 }

@@ -28,6 +28,8 @@ object LesApi {
         retrofit.create(LesApiService::class.java)
     }
 
+    enum class ApiStatus { LOADING, SUCCESS, FAILED }
+
     fun getLesUrl(nama: String): String {
         return "$BASE_URL$nama.png"
     }
