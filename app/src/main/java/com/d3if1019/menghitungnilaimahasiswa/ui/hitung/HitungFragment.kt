@@ -48,6 +48,7 @@ class HitungFragment : Fragment() {
         binding.shareButton.setOnClickListener { shareData() }
         binding.buttonReset.setOnClickListener { reset() }
         viewModel.getHasilNilai().observe(requireActivity()) { showResult(it) }
+        viewModel.scheduleUpdater(requireActivity().application)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
